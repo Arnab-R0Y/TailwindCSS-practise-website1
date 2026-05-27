@@ -9,14 +9,16 @@
 
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <script src="script.js" defer></script>
 </head>
 
 <body class="bg-black text-white">
 
     <nav class="w-full h-13 bg-zinc-900 flex items-center px-4 gap-3 select-none">
 
-        <div class="sm:hidden">
-            <i class="fa-solid fa-bars text-xl text-violet-400"></i>
+        <div id="menu-toggle" class="sm:hidden flex items-center justify-center">
+            <i class="fa-solid fa-bars text-xl text-violet-400 cursor-pointer"></i>
         </div>
 
         <div class="font-extrabold text-2xl text-violet-400">
@@ -27,21 +29,23 @@
 
             <ul class="hidden sm:flex sm:gap-4 cursor-default">
 
-                <li class="hover:bg-violet-400 hover:text-black rounded-2xl px-2 py-1 hover:underline active:scale-90 transition">
+                <li class="hover:scale-110 hover:text-violet-300 px-2 py-1 transition">
                     Home
                 </li>
 
-                <li class="hover:bg-violet-400 hover:text-black rounded-2xl px-2 py-1 hover:underline active:scale-90 transition">
+
+                <li class="hover:scale-110 hover:text-violet-300 px-2 py-1 transition">
                     About Us
                 </li>
 
-                <li class="hover:bg-violet-400 hover:text-black rounded-2xl px-2 py-1 hover:underline active:scale-90 transition">
+
+                <li class="hover:scale-110 hover:text-violet-300 px-2 py-1 transition">
                     Contact Us
                 </li>
 
             </ul>
 
-            <div class="flex gap-6">
+            <div class="hidden sm:flex gap-6">
 
                 <button class="bg-violet-400 text-black py-1 px-2.5 rounded-4xl hover:bg-violet-300 hover:text-black active:scale-90 active:bg-violet-500 cursor-pointer transition">
                     Login
@@ -53,66 +57,103 @@
 
             </div>
 
+            <div id="register-button" class="sm:hidden">
+                <button class="bg-violet-400 text-black py-1 px-2.5 rounded-4xl hover:bg-violet-300 hover:text-black active:scale-90 active:bg-violet-500 cursor-pointer transition">
+                    Register
+                </button>
+            </div>
+
         </div>
 
     </nav>
 
-    <aside class="fixed top-0 left-0 w-[250px] h-full bg-zinc-950 z-50 transform transition-transform duration-300 ease-in-out p-5">
+    <aside id="sidebar" class="fixed top-0 left-0 w-[200px] h-full bg-zinc-950 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out">
 
-        <div class="flex items-center justify-between mb-10">
+        <div class="flex items-center justify-between mb-10 p-5">
 
             <h1 class="text-2xl font-extrabold text-violet-400">
                 Menu
             </h1>
 
-            <button class="text-2xl cursor-pointer text-violet-400">
+            <button id="close-sidebar" class="text-2xl cursor-pointer text-violet-400">
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
         </div>
 
-        <ul class="flex flex-col gap-3 text-lg">
+        <div class=" bg-zinc-900/80 rounded-2xl border border-zinc-800 shadow-lg p-5">
 
-            <li class="flex items-center gap-4">
+            <ul class="flex flex-col gap-3 text-lg">
 
-                <img src="../src/Images/house_white.png"
-                alt=""
-                class="w-6 h-6">
+                <li class="flex items-center gap-4">
 
-                <a class="hover:text-violet-300 transition cursor-pointer"
-                href="">
-                    Home
-                </a>
+                    <img src="../src/Images/house_white.png"
+                    alt=""
+                    class="w-6 h-6">
 
-            </li>
+                    <a class="hover:text-violet-300 transition cursor-pointer"
+                    href="">
+                        Home
+                    </a>
 
-            <li class="flex items-center gap-4">
+                </li>
 
-                <img src="../src/Images/About us.png"
-                alt=""
-                class="w-6 h-6">
+                <li class="flex items-center gap-4">
 
-                <a class="hover:text-violet-300 transition cursor-pointer"
-                href="">
-                    About Us
-                </a>
+                    <img src="../src/Images/About us.png"
+                    alt=""
+                    class="w-6 h-6">
 
-            </li>
+                    <a class="hover:text-violet-300 transition cursor-pointer"
+                    href="">
+                        About Us
+                    </a>
 
-            <li class="flex items-center gap-4">
+                </li>
 
-                <img src="../src/Images/contact_us.png"
-                alt=""
-                class="w-6 h-6">
+                <li class="flex items-center gap-4">
 
-                <a class="hover:text-violet-300 transition cursor-pointer"
-                href="">
-                    Contact Us
-                </a>
+                    <img src="../src/Images/contact_us.png"
+                    alt=""
+                    class="w-6 h-6">
 
-            </li>
+                    <a class="hover:text-violet-300 transition cursor-pointer"
+                    href="">
+                        Contact Us
+                    </a>
 
-        </ul>
+                </li>
+
+            </ul>
+        </div>
+
+        <div id="auth-buttons" class="hidden bg-zinc-900/80 rounded-2xl border border-zinc-800 shadow-lg p-5 mt-5">
+            <ul class="flex flex-col gap-3 text-lg">
+
+                <li class="flex items-center gap-4">
+
+                    <i class="fa-solid fa-arrow-right-to-bracket" style="color: rgb(255, 255, 255);"></i>
+
+                    <a class="hover:text-violet-300 transition cursor-pointer"
+                    href="">
+                        Login
+                    </a>
+
+                </li>
+
+                <li class="flex items-center gap-4">
+
+                    <i class="fa-solid fa-user-plus" style="color: rgb(255, 255, 255);"></i>
+
+                    <a class="hover:text-violet-300 transition cursor-pointer"
+                    href="">
+                        Sign Up
+                    </a>
+
+                </li>
+        </div>
+
+        
 
     </aside>
 

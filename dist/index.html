@@ -4,78 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <link rel="stylesheet" href="../src/output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
-<body class="bg-slate-950 text-white">
-    <nav class="w-full h-13 bg-sky-900 flex items-center px-4 gap-3 select-none">
+
+<body class="bg-black text-white">
+
+    <nav class="w-full h-13 bg-zinc-900 flex items-center px-4 gap-3 select-none">
+
         <div class="sm:hidden">
-            <i class="fa-solid fa-bars text-xl"></i>
+            <i class="fa-solid fa-bars text-xl text-violet-400"></i>
         </div>
-        <div class="font-extrabold text-2xl">Skill Up</div>
+
+        <div class="font-extrabold text-2xl text-violet-400">
+            Skill Up
+        </div>
 
         <div class="ml-auto flex items-center gap-15">
+
             <ul class="hidden sm:flex sm:gap-4 cursor-default">
 
-                <li class="hover:bg-blue-400 hover:text-gray-900 rounded-2xl px-2 py-1 hover:underline active:scale-90">
+                <li class="hover:bg-violet-400 hover:text-black rounded-2xl px-2 py-1 hover:underline active:scale-90 transition">
                     Home
                 </li>
 
-                <li class="hover:bg-blue-400 hover:text-gray-900 rounded-2xl px-2 py-1 hover:underline active:scale-90">
+                <li class="hover:bg-violet-400 hover:text-black rounded-2xl px-2 py-1 hover:underline active:scale-90 transition">
                     About Us
                 </li>
 
-                <li class="hover:bg-blue-400 hover:text-gray-900 rounded-2xl px-2 py-1 hover:underline active:scale-90">
+                <li class="hover:bg-violet-400 hover:text-black rounded-2xl px-2 py-1 hover:underline active:scale-90 transition">
                     Contact Us
                 </li>
 
             </ul>
+
             <div class="flex gap-6">
 
-                <button class=" bg-amber-50 text-gray-900 py-1 px-2.5 rounded-4xl hover:bg-gray-400 hover:text-white active:scale-90 active:bg-amber-200 active:text-black cursor-pointer">
+                <button class="bg-violet-400 text-black py-1 px-2.5 rounded-4xl hover:bg-violet-300 hover:text-black active:scale-90 active:bg-violet-500 cursor-pointer transition">
                     Login
                 </button>
 
-                <button class=" bg-amber-50 text-gray-900 py-1 px-2.5 rounded-4xl hover:bg-gray-400 hover:text-white active:scale-90 active:bg-amber-200 active:text-black cursor-pointer">
+                <button class="bg-violet-400 text-black py-1 px-2.5 rounded-4xl hover:bg-violet-300 hover:text-black active:scale-90 active:bg-violet-500 cursor-pointer transition">
                     Sign Up
                 </button>
 
             </div>
+
         </div>
+
     </nav>
 
-    <aside class="fixed top-0 left-0 w-[250px] h-full bg-sky-950 z-50 transform  transition-transform duration-300 ease-in-out p-5">
-
+    <aside class="fixed top-0 left-0 w-[250px] h-full bg-zinc-950 z-50 transform transition-transform duration-300 ease-in-out p-5">
 
         <div class="flex items-center justify-between mb-10">
 
-            <h1 class="text-2xl font-extrabold">Menu</h1>
+            <h1 class="text-2xl font-extrabold text-violet-400">
+                Menu
+            </h1>
 
-            <button class="text-2xl cursor-pointer">
+            <button class="text-2xl cursor-pointer text-violet-400">
                 <i class="fa-solid fa-xmark"></i>
             </button>
+
         </div>
 
         <ul class="flex flex-col gap-3 text-lg">
 
             <li class="flex items-center gap-4">
-                <img src="../src/Images/house_white.png" alt="" class="w-6 h-6 bg-orange-800">
-                <a class="hover:text-cyan-300 transition cursor-pointer" href="">Home</a>
+
+                <img src="../src/Images/house_white.png"
+                alt=""
+                class="w-6 h-6">
+
+                <a class="hover:text-violet-300 transition cursor-pointer"
+                href="">
+                    Home
+                </a>
+
             </li>
 
             <li class="flex items-center gap-4">
-                <img src="../src/Images/About us.png" alt="" class="w-6 h-6 bg-orange-500">
-                <a class="hover:text-cyan-300 transition cursor-pointer" href="">About Us</a>
+
+                <img src="../src/Images/About us.png"
+                alt=""
+                class="w-6 h-6">
+
+                <a class="hover:text-violet-300 transition cursor-pointer"
+                href="">
+                    About Us
+                </a>
+
             </li>
 
             <li class="flex items-center gap-4">
-                <img src="../src/Images/contact_us.png" alt="" class="w-6 h-6 bg-red-500 p-0">
-                <a class="hover:text-cyan-300 transition cursor-pointer" href="">Contact Us</a>
+
+                <img src="../src/Images/contact_us.png"
+                alt=""
+                class="w-6 h-6">
+
+                <a class="hover:text-violet-300 transition cursor-pointer"
+                href="">
+                    Contact Us
+                </a>
+
             </li>
 
         </ul>
 
-
     </aside>
+
 </body>
 </html>
